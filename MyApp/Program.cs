@@ -1,12 +1,50 @@
-﻿int numero, ninverso = 0;
+﻿int continuar = 1, operador;
 
-Console.WriteLine("Ingrese el número a invertir:");
-numero= Convert.ToInt32(Console.ReadLine());
+double n1= 0 ,n2= 0, resultado= 0;
 
-while(numero > 0 && numero != 0){
-    ninverso = ninverso * 10 + (numero%10);
-    numero= numero/10;
-}
-Console.WriteLine($"El numero invertido es {ninverso}");
+do{
+    Console.WriteLine("Elegir la Opecion a Realizar ");
+    do{
+        Console.WriteLine(" 1-SUMA\n 2-RESTA \n 3-MULTIPLICACION\n 4-DIVISION \n");
+        operador=Convert.ToInt32(Console.ReadLine());
+    }while(operador < 1 || operador > 4);
+
+    Console.WriteLine("Ingreser un numero : ");
+    n1 = Convert.ToDouble(Console.ReadLine());
+    Console.WriteLine("Ingreser un numero : ");
+    n2 = Convert.ToDouble(Console.ReadLine());
+
+    if(operador != 0 ){
+        switch(operador){
+            case 1 : 
+            resultado = n1 + n2 ;
+            Console.WriteLine($"{n1} + {n2} = {resultado}");
+            break;
+            case 2 : 
+            resultado = n1 - n2 ;
+            Console.WriteLine($"{n1} - {n2} = {resultado}");
+            break;
+            case 3 : 
+            resultado = n1 * n2 ;
+            Console.WriteLine($"{n1} * {n2} = {resultado}");
+            break;
+            case 4 : 
+            if( n2 == 0){
+                Console.WriteLine("error");
+            }else{
+                resultado = n1 / n2 ;
+            Console.WriteLine($"{n1} / {n2} = {resultado}");
+            }
+            break;
+    
+        }   
+    }
+    do{ 
+        Console.WriteLine("Seguir usando la calculadoa 1-SI ");
+        continuar=Convert.ToInt32(Console.ReadLine());
+
+    }while(continuar == 4);
+
+}while(continuar == 1 );
 
 

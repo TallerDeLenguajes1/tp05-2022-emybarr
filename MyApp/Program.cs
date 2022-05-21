@@ -18,22 +18,22 @@ do{
         switch(operador){
             case 1 : 
             resultado = n1 + n2 ;
-            Console.WriteLine($"{n1} + {n2} = {resultado}");
+            Console.WriteLine($"{n1} + {n2} = {resultado}\n");
             break;
             case 2 : 
             resultado = n1 - n2 ;
-            Console.WriteLine($"{n1} - {n2} = {resultado}");
+            Console.WriteLine($"{n1} - {n2} = {resultado}\n");
             break;
             case 3 : 
             resultado = n1 * n2 ;
-            Console.WriteLine($"{n1} * {n2} = {resultado}");
+            Console.WriteLine($"{n1} * {n2} = {resultado}\n");
             break;
             case 4 : 
             if( n2 == 0){
-                Console.WriteLine("error");
+                Console.WriteLine("error\n");
             }else{
                 resultado = n1 / n2 ;
-            Console.WriteLine($"{n1} / {n2} = {resultado}");
+            Console.WriteLine($"{n1} / {n2} = {resultado}\n");
             }
             break;
     
@@ -43,7 +43,7 @@ do{
         Console.WriteLine("Seguir usando la calculadoa 1-SI ");
         continuar=Convert.ToInt32(Console.ReadLine());
 
-    }while(continuar == 4);
+    }while(continuar == 0);
 
 }while(continuar == 1 );
 
